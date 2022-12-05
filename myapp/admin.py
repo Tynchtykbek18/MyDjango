@@ -1,9 +1,10 @@
 from django.contrib import admin
-from .models import Order
+from .models import Order, StatusMyApp, CommentMyApp
 
 
-@admin.register(Order)
-class OrderAdmin(admin.ModelAdmin):
-    list_display = ['id', 'order_name']
-    list_display_links = list_display
-    search_fields = ['order_name']
+admin.site.register(Order)
+admin.site.register(StatusMyApp)
+admin.site.register(CommentMyApp)
+
+
+
